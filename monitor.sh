@@ -20,7 +20,7 @@ GDB_COMMANDS="$GDB_COMMANDS -ex \"printf \\\"\\\\n=== STEP 0 ===\\\\n\\\"\" -ex 
 
 # Each step command
 for ((i=1; i<=STEPS; i++)); do
-    GDB_COMMANDS="$GDB_COMMANDS -ex \"stepi\" -ex \"printf \\\"\\\\n=== STEP $i ===\\\\n\\\"\" -ex \"x/1i \\\$pc-4\" -ex \"info registers t0 t1 t2\""
+    GDB_COMMANDS="$GDB_COMMANDS -ex \"stepi\" -ex \"printf \\\"\\\\n=== STEP $i ===\\\\n\\\"\" -ex \"x/1i \\\$pc-4\" -ex \"info registers\""
 done
 
 GDB_COMMANDS="$GDB_COMMANDS -ex \"quit\""
